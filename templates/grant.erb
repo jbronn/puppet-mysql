@@ -1,0 +1,3 @@
+<% if all -%>
+GRANT ALL PRIVILEGES ON <%= db %>.* TO '<%= user %>'@'<%= host %>'<% if grant == 'Y' -%> WITH GRANT OPTION<% end -%>;<% else -%>
+GRANT <%= privileges.join(', ') %> ON <%= db %>.* TO '<%= user %>'@'<%= host %>';<% end -%>

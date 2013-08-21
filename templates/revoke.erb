@@ -1,0 +1,2 @@
+<% if all -%>REVOKE ALL PRIVILEGES ON <%= db %>.* FROM '<%= user %>'@'<%= host %>';<% else -%>
+REVOKE <%= privileges.join(', ') %> ON <%= db %>.* FROM '<%= user %>'@'<%= host %>';<% end -%>
